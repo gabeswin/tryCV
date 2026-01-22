@@ -9,17 +9,28 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     </head>
 
     <style>
     
     body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
     .hero {
-        height: 40%; /* full screen */
+        min-height: 60vh;
         background-image: 
             linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -29,17 +40,51 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+          letter-spacing: 0.5em;
         }
+
+        .nav-link {
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: #dc3545; /* Bootstrap danger */
+}
 
           :root {
     scroll-padding-top: 70px; /* navbar height */
   }
-  
-.special-gothic-expanded-one-regular {
-  font-family: "Special Gothic Expanded One", sans-serif;
+
+.space-grotesk{
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+.cv-card-left {
+  border-radius: 0;
+}
+
+.cv-card-right {
+  border-radius: 0;
+}
+
+@media (min-width: 992px) { /* lg */
+  .cv-card-left {
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+  .cv-card-right {
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+}
+
+
 
     </style>
     <body>
@@ -71,9 +116,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#work">Experience</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
-                </li>
+
             </ul>
         </div>
         </div>
@@ -82,44 +125,65 @@
      <div class="hero d-flex align-items-center justify-content-center">
           <div class="d-flex flex-column align-items-center mt-5">
             <img src="justme.jpg" alt="" width="200" class="img-fluid rounded-circle">
-            <h1 class="mt-3 text-white">Gabriele Besazza</h1>
+            <h1 class="mt-3 text-white bungee-shade-regular">Gabriele Besazza</h1>
         </div>
     </div>  
 
     <section id="about">
-    <div class="container border border-0 shadow mt-5 mb-5">
-        <div class="row justify-content-center border align-items-stretch">
-            <div class="col-md-5">
-                <p class="h1 text-danger p-3 pb-0">About</p>
-                <p class="p-3">Hello! I am Anthony Barnett. Web Developer, Graphic Designer and Photographer.Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skills and experience. Learn More
+    <div class="container shadow mt-5 mb-5" style="border-radius:1rem">
+        <div class="row justify-content-center align-items-stretch">
+            <div class="col-md-5 ">
+                <p class="h1 text-danger p-3 pb-0 space-grotesk">About</p>
+                <p class="p-3"> Hello! I'm Gabriele Besazza, recently graduate in Applied Economics. This is my HTML resume / personal website, built by me using for the most  part the responsive library Bootstrap.
+                    Here you can find my work history and my contacts.  
                 </p>
             </div>
-            <div class="col-md-5">
-                <p class="h1 text-danger p-3 pb-0">Basic Information</p>
-                <p><span class="ps-3 fw-bold">Age: </span><span>25</span></p>
-                <p><span class="ps-3 fw-bold">Email: </span><span>gabriele.besazza@outlook.it</span></p>
-                <p><span class="ps-3 fw-bold">Phone: </span><span>+39 389 464 5513</span></p>
-                <p><span class="ps-3 fw-bold">Address: </span><span>Via Marco Graziati 24, Quinto di Treviso (TV)</span></p>
-                <p><span class="ps-3 fw-bold">Language: </span><span>Italian, English</span></p>
+            <div class="col-md-5 ">
+                <p class="h1 text-danger p-3 pb-0 space-grotesk">Basic Information</p>
+                <div class="row pb-2">
+                    <div class="col-lg-3"><span class="ps-3 fw-bold">Age: </span></div>
+                    <div class="col-lg"><span class="ps-3">25</span></div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col-lg-3"><span class="ps-3 fw-bold">Email: </span></div>
+                    <div class="col-lg"><span class="ps-3">gabriele.besazza@outlook.it</span></div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col-lg-3"><span class="ps-3 fw-bold">Phone: </span></div>
+                    <div class="col-lg"><span class="ps-3">+39 389 464 5513</span></div>
+                </div>
+
+                <div class="row pb-2 ">
+                    <div class="col-lg-3"><span class="ps-3 fw-bold">Address:  </span></div>
+                    <div class="col-lg"><span class="ps-3 text-break">Via Marco Graziati 24, Quinto di Treviso (TV)</span></div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col-lg-3"><span class="ps-3 fw-bold">Language:  </span></div>
+                    <div class="col-lg"><span class="ps-3">Italian, English</span></div>
+                </div>
             </div>
         </div>
     </div>
   </section>
 
-<section id="education" >
+<section id="education" class="bg-light" >
 </section>
-<div class="container ">
-<p class="h1 fw-bold text-center special-gothic-expanded-one-regular">Education</p>
-<div class="row justify-content-center align-items-stretch">
 
-  <div class="col-md-3 shadow p-3 p-md-3
+<div class="container ">
+<p class="h1 fw-bold text-center space-grotesk pb-3">Education</p>
+<div class="row justify-content-center align-items-stretch ">
+
+  <div class="col-lg-3 shadow px-3 p-lg-5 cv-card-left
               d-flex flex-column justify-content-md-center align-items-center
               text-md-center bg-danger " style="--bs-bg-opacity: .75;">
     <p class="lead mb-1 text-white">2023 – 2025</p>
     <p class="lead mb-0 text-white">Master Degree</p>
   </div>
 
-  <div class="col-md-6 shadow px-3 px-md-5">
+  <div class="col-lg-7 shadow px-3 px-lg-5 cv-card-right">
     <p class="h2 text-center pt-3 pb-0 text-danger">Applied Economics</p>
     <p class="h4 text-center pb-3 text-danger-emphasis">University of Padua</p>
     <p class="text-break">
@@ -140,12 +204,12 @@ environment.
 </div>
 
 <div class="row justify-content-center align-items-stretch pt-5">
-  <div class="col-md-3 shadow p-3 p-md-3 d-flex flex-column justify-content-md-center align-items-center text-md-center bg-danger " style="--bs-bg-opacity: .75;">
+  <div class="col-lg-3 shadow p-3 p-lg-3 d-flex flex-column justify-content-md-center align-items-center text-md-center bg-danger cv-card-left" style="--bs-bg-opacity: .75;">
     <p class="lead mb-1 text-white">2019 – 2023</p>
     <p class="lead mb-0 text-white">Bachelor Degree</p>
   </div>
 
-  <div class="col-md-6 shadow px-3 px-md-5">
+  <div class="col-lg-7 shadow px-3 px-lg-5 cv-card-right">
     <p class="h2 text-center pt-3 pb-0 text-danger">Economia</p>
     <p class="h4 text-center pb-3 text-danger-emphasis">University of Padua</p>
     <p class="text-break">
@@ -160,20 +224,20 @@ environment.
 
 <section id="work">
 <div class="container pt-5">
-    <p class="h1 fw-bold text-center">Work Experience (so far)</p>
+    <p class="h1 fw-bold text-center space-grotesk pb-3">Work Experience</p>
 <div class="row justify-content-center align-items-stretch ">
-  <div class="col-md-3 shadow p-3 p-md-3 d-flex flex-column justify-content-md-center align-items-center text-md-center bg-danger " style="--bs-bg-opacity: .75;">
-    <p class="lead mb-1 text-white">2019 – 2023</p>
-    <p class="lead mb-0 text-white">Bachelor Degree</p>
+  <div class="col-lg-3 cv-card-left shadow p-3 p-lg-3 d-flex flex-column justify-content-md-center align-items-center text-md-center bg-danger card-like-left" style="--bs-bg-opacity: .75;">
+    <p class="lead mb-1 text-white">july 2023 – november 2023</p>
+    <p class="lead mb-0 text-white">Internship</p>
   </div>
 
-  <div class="col-md-6 shadow px-3 px-md-5">
-    <p class="h2 text-center pt-3 pb-0 text-danger">Economia</p>
-    <p class="h4 text-center pb-3 text-danger-emphasis">University of Padua</p>
+  <div class="col-lg-7 cv-card-right shadow px-3 px-lg-5 card-like-right">
+    <p class="h2 text-center pt-3 pb-0 text-danger">Accounting</p>
+    <p class="h4 text-center pb-3 text-danger-emphasis">Studio Rugolo</p>
     <p class="text-break">
-     
+     During this Internship my main task was to manage the invoices for a group of clients and to 
+     realize analysis in Excel based on the data gathered in the accounting software
     </p>
-    <p class="lead text-danger">Final grade: 101/110</p>
   </div>
 </div>
 </div>
@@ -181,7 +245,17 @@ environment.
 
 
 
-    <div class="mt-5 p-4 bg-dark text-white text-center bg-gradient">
+
+<div class="mt-5 p-4 bg-dark text-white text-center bg-gradient">
+         <a href="mailto:gabriele.besazza@outlook.it" class="text-white me-3">
+    <i class="bi bi-envelope"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/gabrielebesazza" class="text-white me-3">
+    <i class="bi bi-linkedin"></i>
+  </a>
+  <a href="https://github.com/gabeswin" class="text-white">
+    <i class="bi bi-github"></i>
+  </a>
     <p>made with 💜 by me 👾  </p>
     </div>
 
